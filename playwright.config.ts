@@ -1,10 +1,11 @@
 import { defineConfig, devices } from "@playwright/test";
+import { config } from "dotenv";
 
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
  */
-require("dotenv").config({ path: ".env" });
+config({ path: ".env" });
 
 /**
  * See https://playwright.dev/docs/test-configuration.
@@ -29,10 +30,10 @@ export default defineConfig({
   /* Shared settings for all the workspaces below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: "http://localhost:3000",
+    baseURL: process.env.BASE_URL || "http://localhost:3000",
 
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: "on-first-retry",
+    /* Retain traces for failed attempts, including failures before a retry. */
+    trace: "retain-on-failure",
     permissions: ["clipboard-read", "clipboard-write"],
     screenshot: "only-on-failure", // Capture screenshots only on test failure
     video: "retain-on-failure", // Optionally record video on failure

@@ -270,6 +270,9 @@ importers:
       dotenv:
         specifier: 'catalog:'
         version: 17.3.1
+      endform:
+        specifier: 0.81.1
+        version: 0.81.1
       eslint:
         specifier: 9.39.5
         version: 9.39.5(jiti@2.7.0)
@@ -7685,6 +7688,40 @@ packages:
 
   end-of-stream@1.4.5:
     resolution: {integrity: sha512-ooEGc6HP26xXq/N+GCGOT0JKCLDGrq2bQUZrQ7gyrJiZANJ/8YDTxTpQBXGMn+WbIQXNVpyWymm7KYVICQnyOg==}
+
+  endform-darwin-arm64@0.81.1:
+    resolution: {integrity: sha512-duBYoWEdBEdk9UHUrUA9ZYP3RqxXGrjS6plkrwFmdnhFAph+6gopXUljw6d1pJB0j/kP25LPBEPK+5iQ1rx5ng==}
+    cpu: [arm64]
+    os: [darwin]
+
+  endform-darwin-x86@0.81.1:
+    resolution: {integrity: sha512-an6GjutD6PZAF5PLlWIEWTMOkLZx5LrVZ4OmukL1eQd8WWITsFi42VGfxYpYJFXe7GdQaCDrEaJSLCdsL0Iqyw==}
+    cpu: [x64]
+    os: [darwin]
+
+  endform-linux-arm64@0.81.1:
+    resolution: {integrity: sha512-gxhTi3jsRtzA4ZhibK4idNAcp0cb0V4idZkJxLCq9ao8FUMUiiVHhjhtiFNO7eUGgsA8+DfFnRdiPa2zTePWjQ==}
+    cpu: [arm64]
+    os: [linux]
+
+  endform-linux-x86@0.81.1:
+    resolution: {integrity: sha512-aXZP8Wds4bzcCRMFOL64/B7jQLIP7ECrDW8H6vjl6TZTjg7lipfPLams8R2RDigRUjB5i8RDwuusoeOMvYf2gA==}
+    cpu: [x64]
+    os: [linux]
+
+  endform-win32-arm64@0.81.1:
+    resolution: {integrity: sha512-ckWkuUgGj9bPzMfTJOLX2n6YgWjPxhJWtcKMQX6it5OhB8bDjHA2vnhOowPZlLoPwLtjT3NaEUnh81NdHFVhDw==}
+    cpu: [arm64]
+    os: [win32]
+
+  endform-win32-x86@0.81.1:
+    resolution: {integrity: sha512-I5cXm6huxhcs5ZTH+U4O0Ehx6kvpKH4HVATPT5y4C+GliAZVY+rcrB2NBIl+61xWsjHmoC6tkn+HX6lzKJlCGw==}
+    cpu: [x64]
+    os: [win32]
+
+  endform@0.81.1:
+    resolution: {integrity: sha512-dLWKcpN6FfIEcxzzlJkBBDLcxll7xkS36tuKadt13lM8ZwbcmytgLHHgJ1USLtLuUWCrsPq172qtiZHN3sufXQ==}
+    hasBin: true
 
   engine.io-parser@5.2.3:
     resolution: {integrity: sha512-HqD3yTBfnBxIrbnM1DoD6Pcq8NECnh8d4As1Qgh0z5Gg3jRRIqijury0CL3ghu/edArpUYiYqQiDUQBIs4np3Q==}
@@ -19408,6 +19445,33 @@ snapshots:
   end-of-stream@1.4.5:
     dependencies:
       once: 1.4.0
+
+  endform-darwin-arm64@0.81.1:
+    optional: true
+
+  endform-darwin-x86@0.81.1:
+    optional: true
+
+  endform-linux-arm64@0.81.1:
+    optional: true
+
+  endform-linux-x86@0.81.1:
+    optional: true
+
+  endform-win32-arm64@0.81.1:
+    optional: true
+
+  endform-win32-x86@0.81.1:
+    optional: true
+
+  endform@0.81.1:
+    optionalDependencies:
+      endform-darwin-arm64: 0.81.1
+      endform-darwin-x86: 0.81.1
+      endform-linux-arm64: 0.81.1
+      endform-linux-x86: 0.81.1
+      endform-win32-arm64: 0.81.1
+      endform-win32-x86: 0.81.1
 
   engine.io-parser@5.2.3: {}
 
